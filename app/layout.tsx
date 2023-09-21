@@ -1,8 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Open_Sans } from 'next/font/google';
+import { StoreProvider } from '@/redux/StoreProvider';
 
-const inter = Inter({ subsets: ['latin'] });
+const sans = Open_Sans({
+  subsets: ['latin'],
+  variable: '--font-open-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Yesdok.com',
@@ -16,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={sans.className}>
+        <StoreProvider>{children}</StoreProvider>
+      </body>
     </html>
   );
 }

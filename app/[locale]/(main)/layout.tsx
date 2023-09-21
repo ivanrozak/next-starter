@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function MainLayout({
   children,
 }: {
@@ -5,7 +7,12 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <div>Header main</div>
+      <div className="flex gap-4">
+        <Link href="/">Home</Link>
+        <Link href="/company">Company</Link>
+        <Link href="/doctor/3">Doctor</Link>
+        <Link href="/download">Download</Link>
+      </div>
       {children}
       <div>Footer main</div>
     </>
