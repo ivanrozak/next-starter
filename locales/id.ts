@@ -1,5 +1,11 @@
 export default {
-  hello: 'Bonjour',
-  'hello.world': 'Bonjour le monde !',
-  welcome: 'Selamat datang {name} !',
+  header: {
+    menus: {
+      profile: 'Profil',
+      doctorService: 'Layanan Dokter',
+      checkupService: 'Layanan Pemeriksaan',
+      store: 'Store',
+      article: 'Info Sehat',
+    },
+  },
 } as const;

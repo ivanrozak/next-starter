@@ -1,6 +1,11 @@
 export default {
-  hello: 'Hello',
-  'hello.world': 'Hello world!',
-  'hello.world.welcome': 'Hello {name}!',
-  welcome: 'Hello {name}!',
+  header: {
+    menus: {
+      profile: 'Profile',
+      doctorService: 'Doctor Services',
+      checkupService: 'Checkup Services',
+      store: 'Store',
+      article: 'Health Info',
+    },
+  },
 } as const;

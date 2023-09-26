@@ -1,4 +1,5 @@
-import Link from 'next/link';
+import Footer from '@/components/molecules/Footer';
+import Navbar from '@/components/Navbar';
 
 export default function MainLayout({
   children,
@@ -7,14 +8,9 @@ export default function MainLayout({
 }) {
   return (
     <>
-      <div className="flex gap-4">
-        <Link href="/">Home</Link>
-        <Link href="/company">Company</Link>
-        <Link href="/doctor/3">Doctor</Link>
-        <Link href="/download">Download</Link>
-      </div>
-      {children}
-      <div>Footer main</div>
+      <Navbar />
+      <div className="container mx-auto">{children}</div>
+      <Footer />
     </>
   );
 }
