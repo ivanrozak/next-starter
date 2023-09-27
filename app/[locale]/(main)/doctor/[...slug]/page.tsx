@@ -1,11 +1,9 @@
 import React from 'react';
 
-const DoctorListPage = ({ params }: { params: { slug: string } }) => {
+const DoctorListPage = () => {
   return (
     <>
-      <div>Test Routing</div>
-      {params.slug[0]}
-      {JSON.stringify(params.slug)}
+      <div>Doctor List Page</div>
     </>
   );
 };

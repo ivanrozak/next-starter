@@ -8,11 +8,11 @@ const ListMenus = async () => {
   const menus = [
     {
       name: 'profile',
-      link: '/profile',
+      link: '/company',
     },
     {
       name: 'doctorService',
-      link: '/doctors',
+      link: '/doctor/list',
     },
     {
       name: 'checkupService',

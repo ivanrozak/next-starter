@@ -1,9 +1,9 @@
-import './globals.css';
+import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-import { StoreProvider } from '@/redux/StoreProvider';
+import { Providers } from './providers';
 
-const sans = Open_Sans({
+const opensans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
 });
@@ -19,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={sans.className}>
-        <StoreProvider>{children}</StoreProvider>
+    <html lang="en" className="light">
+      <body className={opensans.className}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

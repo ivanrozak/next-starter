@@ -1,4 +1,3 @@
-import Footer from '@/components/molecules/Footer';
 import Navbar from '@/components/Navbar';
 
 export default function MainLayout({
@@ -10,7 +9,6 @@ export default function MainLayout({
     <>
       <Navbar />
       <div className="container mx-auto">{children}</div>
-      <Footer />
     </>
   );
 }
