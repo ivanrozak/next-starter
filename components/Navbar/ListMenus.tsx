@@ -1,9 +1,8 @@
 import React from 'react';
-import { getI18n, getScopedI18n } from '@/locales/server';
+import { getScopedI18n } from '@/locales/server';
 import Link from 'next/link';
 
 const ListMenus = async () => {
-  const t = await getI18n();
   const tMenu = await getScopedI18n('header.menus');
   const menus = [
     {
@@ -29,14 +28,18 @@ const ListMenus = async () => {
   ];
 
   return (
-    <div className="flex gap-4">
+    <>
       {menus.map((menu) => (
-        <Link key={menu.name} href={menu.link}>
+        <Link
+          key={menu.name}
+          href={menu.link}
+          className="border-b border-transparent hover:border-black"
+        >
           {/* @ts-ignore */}
           {tMenu(menu.name)}
         </Link>
       ))}
-    </div>
+    </>
   );
 };
 
