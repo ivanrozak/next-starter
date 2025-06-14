@@ -1,7 +1,7 @@
-import antfu from '@antfu/eslint-config';
-import nextPlugin from '@next/eslint-plugin-next';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tailwind from 'eslint-plugin-tailwindcss';
+import antfu from '@antfu/eslint-config'
+import nextPlugin from '@next/eslint-plugin-next'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import tailwind from 'eslint-plugin-tailwindcss'
 
 export default antfu(
   {
@@ -10,7 +10,7 @@ export default antfu(
     stylistic: {
       indent: 2,
       quotes: 'single',
-      semi: true,
+      semi: false,
     },
     jsonc: false,
     yaml: false,
@@ -25,7 +25,7 @@ export default antfu(
     rules: {
       ...nextPlugin.configs.recommended.rules,
       ...nextPlugin.configs['core-web-vitals'].rules,
-      'tailwindcss/classnames-order': 'off', // Disabled for performance
+      'tailwindcss/classnames-order': 'error', // Disabled for performance
       'tailwindcss/no-custom-classname': 'off',
       'react-refresh/only-export-components': [
         'warn',
@@ -39,4 +39,4 @@ export default antfu(
       },
     },
   },
-);
+)
