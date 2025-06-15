@@ -7,6 +7,7 @@ export default antfu(
   {
     typescript: true,
     react: true,
+    // node: true,
     stylistic: {
       indent: 2,
       quotes: 'single',
@@ -31,6 +32,9 @@ export default antfu(
         'warn',
         { allowConstantExport: true },
       ],
+      'no-console': 'warn',
+      'node/prefer-global/process': 'off', // Allow using `process.env`
+      'no-undef': 'off',
     },
     settings: {
       tailwindcss: {
